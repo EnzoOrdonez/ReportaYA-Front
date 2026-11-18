@@ -37,8 +37,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         telefono: _c['telefono']!.text.trim(),
         correo: _c['correo']!.text.trim(),
       ));
-      AppToast.success('Cuenta creada! Ya puedes iniciar sesion.');
-      await Future.delayed(const Duration(milliseconds: 600));
+      // La cuenta nace inactiva hasta verificar el correo (el login devolveria 403).
+      AppToast.success('Cuenta creada. Revisa tu correo y abre el enlace de activacion antes de iniciar sesion.');
+      await Future.delayed(const Duration(milliseconds: 1800));
       Get.offAllNamed(AppRoutes.login);
     } catch (e) {
       AppToast.error(e.toString().replaceFirst('Exception: ', ''));
