@@ -97,8 +97,8 @@ class AuthController extends GetxController {
 
   // --- CU-02 Registro ---
 
-  Future<void> registrar(CrearCuentaRequest req) async {
-    await _auth.crearCuenta(req);
+  Future<CuentaResponse> registrar(CrearCuentaRequest req) async {
+    return _auth.crearCuenta(req);
   }
 
   // --- CU-03 Recuperar contraseña ---

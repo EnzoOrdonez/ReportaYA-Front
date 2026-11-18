@@ -16,8 +16,10 @@ class ApiConfig {
   static const String _compileOverride =
       String.fromEnvironment('API_BASE_URL', defaultValue: '');
 
-  static const String productionUrl =
-      'https://reportaya-backend.onrender.com/api';
+  /// Backend en la nube. Se puede cambiar al compilar sin tocar el código:
+  /// `--dart-define=NUBE_URL=https://otro-servicio.onrender.com/api`.
+  static const String productionUrl = String.fromEnvironment('NUBE_URL',
+      defaultValue: 'https://reportaya-backend.onrender.com/api');
 
   static const String _storageKey = 'api_base_url';
 
