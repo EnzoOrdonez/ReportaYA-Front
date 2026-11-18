@@ -1,6 +1,6 @@
 {
-    "name": "reportaya",
-    "short_name": "reportaya",
+    "name": "ReportaYA",
+    "short_name": "ReportaYA",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
